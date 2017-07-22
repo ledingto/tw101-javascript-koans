@@ -19,8 +19,8 @@
 
 */
 
-function writeAnswer(answer) {
-    $('div.answer').append($('<div>').text(answer));
+function changeElementText(element, answer) {
+    $(element).text(answer);
 }
 
 function kiteGame(numberOfKites) {
@@ -38,5 +38,4 @@ function kiteGame(numberOfKites) {
       }
     }
 
-    writeAnswer(answer);
 }
