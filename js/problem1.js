@@ -19,16 +19,24 @@
 
 */
 
-
-function changeElementText(element, answer) {
-    $(element).text(answer);
+function writeAnswer(answer) {
+    $('div.answer').append($('<div>').text(answer));
 }
 
 function kiteGame(numberOfKites) {
-    changeElementText("#numberOfKites", numberOfKites);
     var answer = "";
 
-    // write some code here!
+    for (var num = 1; num <= numberOfKites; num++) {
+      if (num % 3 == 0 && num % 5 == 0) {
+        answer += "Peche! Ipo kaate! ";
+      } else if (num % 3 == 0) {
+        answer += "Peche! ";
+      } else if (num % 5 == 0) {
+        answer += "Ipo kaate! "
+      } else {
+        answer += num + " ";
+      }
+    }
 
-    changeElementText("#answer", answer);
+    writeAnswer(answer);
 }
