@@ -24,6 +24,7 @@ function changeElementText(element, answer) {
 }
 
 function kiteGame(numberOfKites) {
+    changeElementText("#numberOfKites", numberOfKites)
     var answer = "";
 
     for (var num = 1; num <= numberOfKites; num++) {
@@ -37,5 +38,7 @@ function kiteGame(numberOfKites) {
         answer += num + " ";
       }
     }
+
+    changeElementText("#answer", answer);
 
 }
